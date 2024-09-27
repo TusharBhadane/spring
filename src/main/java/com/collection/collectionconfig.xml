@@ -7,24 +7,35 @@
   https://www.springframework.org/schema/beans/spring-beans.xsd
   http://www.springframework.org/schema/context
   https://www.springframework.org/schema/beans/spring-context.xsd">
- 
- <bean class="com.spring.Student" name="student1">
-	<property name="studentId">
-		<value>124</value>
-	</property>
-	<property name="studentName">
-		<value>Tushar</value>
-	</property>
-	<property name="studentAddres">
-		<value>pune</value>
+
+<bean name="emp1" class="com.collection.EMP">
+	<property name="name" value="tushar"/>
+	
+	<property name="phones">
+		<list>
+			<value>123456</value>
+			<value>123456</value>
+			<value>123456</value>
+		</list>
+		
 	</property>
 	
-	<!-- <property name="studentId" value="123"/>
-	<property name="studentName" value="Bhadane"/>
-	<property name="studentAddres" value="pune23"/>-->
-
-  </bean>
-<!--  </bean class="com.spring.Student" name="student1" p:studentId="123456" p:studentName="Tushar" p:studentAddres="123456"> </bean>-->
+		<property name="addresses">
+		<set>
+			<value>UP</value>
+			<value>asv</value>
+			<value>wr</value>
+		</set>
+	</property>
+	
+	<property name="courses">
+		<map>
+			<entry key="java" value="2month"/>
+			<entry key="python" value="2month"/>
+		</map>
+	</property>
+	
+</bean>
   
   
 </beans>	
